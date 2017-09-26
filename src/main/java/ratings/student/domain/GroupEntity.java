@@ -1,5 +1,7 @@
 package ratings.student.domain;
 
+import ratings.student.domain.base.BaseEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -8,5 +10,5 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "groups")
-public class GroupEntity {
+public class GroupEntity extends BaseEntity {
 }
