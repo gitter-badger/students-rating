@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.7.RELEASE'
+}
+group 'students-rating'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply from: "$rootDir/gradle/spring-boot.gradle"
+apply from: "$rootDir/gradle/thymeleaf.gradle"
+apply from: "$rootDir/gradle/database.gradle"
+apply from: "$rootDir/gradle/caching.gradle"
+apply from: "$rootDir/gradle/webjars.gradle"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile 'junit:junit:4.12'
+    testCompile "org.codehaus.mojo:cobertura-maven-plugin:$coberturaVersion"
+}

@@ -1,0 +1,4 @@
+dependencies {
+    compile 'org.hsqldb:hsqldb'
+    compile 'mysql:mysql-connector-java'
+}

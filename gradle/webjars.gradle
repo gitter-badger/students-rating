@@ -1,0 +1,6 @@
+dependencies {
+    compile 'org.webjars:webjars-locator'
+    compile "org.webjars:jquery:$webjarsJqueryVersion"
+    compile "org.webjars:jquery-ui:$webjarsJqueryUiVersion"
+    compile "org.webjars:bootstrap:$webjarsBootstrapVersion"
+}

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.maven:maven-error-diagnostics:2.0.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-error-diagnostics/2.0.8/3aed7ee535a910761384475c20cfef21943c855c/maven-error-diagnostics-2.0.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-error-diagnostics/2.0.8/54c0ef4262b3b336ecfb608cb4f43401e9a52ab3/maven-error-diagnostics-2.0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

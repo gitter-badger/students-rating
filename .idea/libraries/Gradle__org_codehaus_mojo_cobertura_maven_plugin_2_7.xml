@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.mojo:cobertura-maven-plugin:2.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/cobertura-maven-plugin/2.7/d49d827220fc4282babb85fb3b9970ffdb99aff/cobertura-maven-plugin-2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/cobertura-maven-plugin/2.7/4bcabbf02adf3e838a346ed57455eadeae435358/cobertura-maven-plugin-2.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
