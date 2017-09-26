@@ -1,4 +1,4 @@
-package ratings.student.controller;
+package ratings.student.controllers;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
