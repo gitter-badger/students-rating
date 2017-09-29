@@ -1,4 +1,5 @@
-# Students rating project
+# Students rating project [![Build Status](https://travis-ci.org/romankh3/students-rating.svg?branch=master)](https://travis-ci.org/romankh3/students-rating)
+
 
 ## Running project localy
 ```
