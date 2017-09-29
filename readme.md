@@ -1,1 +1,0 @@
-# Spring Student Rating Application 
