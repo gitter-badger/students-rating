@@ -26,10 +26,10 @@ public class StudentEntity extends BaseEntity {
     @Column( name = "group_id" )
     @NotEmpty
     private Integer groupId;
-
-
-    List<SemesterEntity> semesterEntities;
-
+//
+//
+//    List<SemesterEntity> semesterEntities;
+//
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }

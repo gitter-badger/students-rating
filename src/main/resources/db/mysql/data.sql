@@ -12,11 +12,11 @@ INSERT IGNORE INTO subjects VALUES ( 4, 'subject 4', 4.1 );
 INSERT IGNORE INTO groups VALUES (1, 'group name');
 
 # Students data:
-INSERT IGNORE INTO students VALUES (1,'student 1',1);
-INSERT IGNORE INTO students VALUES (2,'student 2',1);
-INSERT IGNORE INTO students VALUES (3,'student 3',1);
-INSERT IGNORE INTO students VALUES (4,'student 4',1);
-INSERT IGNORE INTO students VALUES (5,'student 5',1);
+INSERT IGNORE INTO students VALUES (1,'firstName 1','lastName 1',1);
+INSERT IGNORE INTO students VALUES (2,'firstName 2','lastName 2',1);
+INSERT IGNORE INTO students VALUES (3,'firstName 3','lastName 3',1);
+INSERT IGNORE INTO students VALUES (4,'firstName 4','lastName 4',1);
+INSERT IGNORE INTO students VALUES (5,'firstName 5','lastName 5',1);
 
 # Semesters data:
 INSERT IGNORE INTO semesters VALUES (1, 'semester 1');
