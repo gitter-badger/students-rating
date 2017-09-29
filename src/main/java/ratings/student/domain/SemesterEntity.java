@@ -11,8 +11,4 @@ import java.util.List;
 @Entity
 @Table( name = "semesters" )
 public class SemesterEntity extends BaseEntity {
-
-//    @OneToMany( mappedBy =  "subject_id" )
-//    @JoinColumn( name = "subjects" )
-//    List<SubjectEntity> subjectEntities;
 }

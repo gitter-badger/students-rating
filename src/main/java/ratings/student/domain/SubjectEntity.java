@@ -10,17 +10,9 @@ import javax.persistence.Table;
 @Table( name = "subjects" )
 public class SubjectEntity extends BaseEntity {
 
-//    @Column( name = "student_id" )
-//    private Integer studentId;
-//
     @Column( name = "credit" )
     private Double credit;
-
-
-//    @Column( name = "grade" )
-//    private Integer grade;
-
-
+    
     public void setCredit(Double credit) {
         this.credit = credit;
     }
