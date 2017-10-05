@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../static/main.css" />
+
+</head>
+<body>
+
+<h2>Students</h2>
+
+<table id="students" class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 150px;">FirstName</th>
+        <th style="width: 200px;">LastName</th>
+        <th style="width: 200px;">GroupId</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.FirstName}"/>
+        <td th:text="${student.lastName}"/>
+        <td th:text="${student.groupId}"/>
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
