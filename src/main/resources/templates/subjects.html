@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Subjects</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../static/main.css" />
+
+</head>
+<body>
+
+<h2>Subjects</h2>
+
+<table id="students" class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 150px;">Name</th>
+        <th style="width: 200px;">Credit</th>
+        <th style="width: 200px;">id</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="subject : ${subjects}">
+        <td th:text="${subject.name}"/>
+        <td th:text="${subject.credit}"/>
+        <td th:text="${subject.id}"/>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

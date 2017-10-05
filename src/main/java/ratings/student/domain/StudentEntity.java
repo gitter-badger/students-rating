@@ -24,7 +24,6 @@ public class StudentEntity extends BaseEntity {
     private String firstName;
 
     @Column( name = "group_id" )
-    @NotEmpty
     private Integer groupId;
 
     public void setLastName(String lastName) {
@@ -40,7 +39,6 @@ public class StudentEntity extends BaseEntity {
     }
 
     public String getLastName() {
-
         return lastName;
     }
 
@@ -50,5 +48,26 @@ public class StudentEntity extends BaseEntity {
 
     public Integer getGroupId() {
         return groupId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        StudentEntity that = (StudentEntity) o;
+
+        if (lastName != null ? !lastName.equals(that.lastName) : that.lastName != null) return false;
+        if (firstName != null ? !firstName.equals(that.firstName) : that.firstName != null) return false;
+        return groupId != null ? groupId.equals(that.groupId) : that.groupId == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 5;
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (groupId != null ? groupId.hashCode() : 0);
+        return result;
     }
 }

@@ -1,6 +1,8 @@
 package ratings.student.domain;
 
+import com.fasterxml.jackson.databind.util.Named;
 import ratings.student.domain.base.BaseEntity;
+import ratings.student.domain.base.NamedEntity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -10,5 +12,5 @@ import java.util.List;
  */
 @Entity
 @Table( name = "semesters" )
-public class SemesterEntity extends BaseEntity {
+public class SemesterEntity extends NamedEntity {
 }
