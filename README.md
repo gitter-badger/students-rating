@@ -5,10 +5,12 @@
 ```
 $ git clone https://github.com/romankh3/students-rating.git
 $ cd students-rating
-$ ./gradlew bootRun
+$ ./run.sh
 ```
 
 You can then access `Students Rating` here: `http://localhost:8080/`
 
 ## Database configuration
-Using `MySQL`
+Using `MySQL` and `HSQLDB`.
+Planing for adding MongoDB.
+
