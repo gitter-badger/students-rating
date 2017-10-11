@@ -2,7 +2,6 @@ package ratings.student.repositories;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ratings.student.BaseIntegrationTest;
 import ratings.student.domain.SubjectEntity;
 
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.List;
 /**
  * Integration-level testing for a {@link SubjectRepository}
  */
-public class SubjectRepositoryIntegrationTest extends BaseIntegrationTest {
+public class SubjectRepositoryIntegrationTest extends BaseRepositoryIntegrationTest {
 
     @Test
     public void testRepositoryMethods() {

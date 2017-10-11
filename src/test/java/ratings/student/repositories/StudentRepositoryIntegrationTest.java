@@ -2,7 +2,6 @@ package ratings.student.repositories;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ratings.student.BaseIntegrationTest;
 import ratings.student.domain.StudentEntity;
 
 import java.util.ArrayList;
@@ -11,8 +10,7 @@ import java.util.List;
 /**
  * Integration-testing for a {@link StudentRepository} object.
  */
-
-public class StudentRepositoryIntegrationTest extends BaseIntegrationTest {
+public class StudentRepositoryIntegrationTest extends BaseRepositoryIntegrationTest {
 
     @Test
     public void testSaveMethod() {

@@ -1,24 +1,15 @@
 package ratings.student.repositories;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import ratings.student.BaseIntegrationTest;
-import ratings.student.RandomizeData;
 import ratings.student.domain.GroupEntity;
 
 import java.util.List;
 
-import static org.junit.Assert.assertNotNull;
-
 /**
  * Integration-level testing for {@link GroupEntity} object.
  */
-public class GroupRepositoryIntegrationTest extends BaseIntegrationTest {
+public class GroupRepositoryIntegrationTest extends BaseRepositoryIntegrationTest {
 
     @Test
     public void testMethods() {
