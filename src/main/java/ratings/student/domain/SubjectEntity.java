@@ -1,11 +1,8 @@
 package ratings.student.domain;
 
-import ratings.student.domain.base.BaseEntity;
 import ratings.student.domain.base.NamedEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table( name = "subjects" )
@@ -13,7 +10,7 @@ public class SubjectEntity extends NamedEntity {
 
     @Column( name = "credit" )
     private Double credit;
-    
+
     public void setCredit(Double credit) {
         this.credit = credit;
     }

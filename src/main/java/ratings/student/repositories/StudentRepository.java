@@ -10,5 +10,7 @@ public interface StudentRepository extends Repository<StudentEntity, Integer> {
 
     List<StudentEntity> findAll();
 
+    StudentEntity findById( int id );
+
     void save(StudentEntity entity);
 }

@@ -7,6 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import ratings.student.RandomizeData;
 
+import static org.junit.Assert.assertNotNull;
+
 /**
  * Base Integration test object for all tests.
  */
@@ -23,9 +25,14 @@ public class BaseRepositoryIntegrationTest extends RandomizeData {
     @Autowired
     SubjectRepository subjectRepository;
 
-    /**
-     * This test needs to be for making it as Base Test.
-     */
+    @Autowired
+    SemesterRepository semesterRepository;
+
     @Test
-    public void testBaseRepository() {}
+    public void testBaseRepository() {
+        assertNotNull( groupRepository );
+        assertNotNull( studentRepository );
+        assertNotNull( subjectRepository );
+        assertNotNull( semesterRepository );
+    }
 }

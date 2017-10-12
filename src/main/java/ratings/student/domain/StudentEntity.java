@@ -3,10 +3,9 @@ package ratings.student.domain;
 import org.hibernate.validator.constraints.NotEmpty;
 import ratings.student.domain.base.BaseEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.List;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Simple JavaBean object for a students table.
@@ -25,6 +24,22 @@ public class StudentEntity extends BaseEntity {
 
     @Column( name = "group_id" )
     private Integer groupId;
+
+
+    @ManyToMany( fetch = FetchType.EAGER, cascade = CascadeType.ALL )
+    @JoinTable( name = "semester_students", joinColumns = {
+            @JoinColumn(name = "student_id", nullable = false, updatable = false ) },
+            inverseJoinColumns = { @JoinColumn( name = "semester_id", nullable = false, updatable = false) } )
+    private Set<SemesterEntity> semesters;
+
+    public Set<SemesterEntity> getSemesters() {
+        if ( semesters == null ) semesters = new HashSet<>();
+        return semesters;
+    }
+
+    public void setSemesters(Set<SemesterEntity> semesters) {
+        this.semesters = semesters;
+    }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
