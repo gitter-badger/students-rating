@@ -18,11 +18,9 @@ repositories {
 }
 
 dependencies {
-
     testCompile 'junit:junit:4.12'
     testCompile "org.codehaus.mojo:cobertura-maven-plugin:$coberturaVersion"
 }
-
 
 defaultTasks << 'clean'
 defaultTasks << 'build'
