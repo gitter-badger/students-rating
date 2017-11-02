@@ -1,5 +1,8 @@
 package ratings.student.domain;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.NotEmpty;
 import ratings.student.domain.base.BaseEntity;
 
@@ -66,23 +69,11 @@ public class StudentEntity extends BaseEntity {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        StudentEntity that = (StudentEntity) o;
-
-        if (lastName != null ? !lastName.equals(that.lastName) : that.lastName != null) return false;
-        if (firstName != null ? !firstName.equals(that.firstName) : that.firstName != null) return false;
-        return groupId != null ? groupId.equals(that.groupId) : that.groupId == null;
-    }
+    public boolean equals(Object obj) { return EqualsBuilder.reflectionEquals(this, obj, "id", "semesters"); }
 
     @Override
-    public int hashCode() {
-        int result = 5;
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (groupId != null ? groupId.hashCode() : 0);
-        return result;
-    }
+    public int hashCode() { return HashCodeBuilder.reflectionHashCode(this, "id", "semesters"); }
+
+    @Override
+    public String toString() { return ToStringBuilder.reflectionToString(this); }
 }

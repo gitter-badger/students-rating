@@ -1,6 +1,5 @@
 package ratings.student.repositories;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import ratings.student.domain.StudentEntity;
 
@@ -10,7 +9,7 @@ public interface StudentRepository extends Repository<StudentEntity, Integer> {
 
     List<StudentEntity> findAll();
 
-    StudentEntity findById( int id );
+    List<StudentEntity> findByGroupId( int groupId );
 
     void save(StudentEntity entity);
 }

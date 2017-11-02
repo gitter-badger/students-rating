@@ -1,9 +1,6 @@
 package ratings.student;
 
-import ratings.student.domain.GroupEntity;
-import ratings.student.domain.SemesterEntity;
-import ratings.student.domain.StudentEntity;
-import ratings.student.domain.SubjectEntity;
+import ratings.student.domain.*;
 
 import java.util.HashSet;
 import java.util.List;
@@ -41,8 +38,8 @@ public abstract class RandomizeData {
         return group;
     }
 
-    protected SubjectEntity createRandomSubject() {
-        SubjectEntity entity = new SubjectEntity();
+    protected CourseEntity createRandomCourse() {
+        CourseEntity entity = new CourseEntity();
         entity.setCredit( randomDouble( 0.5, 5 ) );
         entity.setName( randomHexString() );
         return entity;
@@ -51,12 +48,12 @@ public abstract class RandomizeData {
     protected SemesterEntity createRandomSemester() {
         SemesterEntity semesterEntity = new SemesterEntity();
         semesterEntity.setName( randomHexString() );
-        List<SubjectEntity> subjectList = Stream.of(1,2,3,4,5)
-                .map(it -> createRandomSubject())
+        List<CourseEntity> courseList = Stream.of(1,2,3,4,5)
+                .map(it -> createRandomCourse())
                 .collect(Collectors.toList());
-        Set<SubjectEntity> subjects = new HashSet<>();
-        subjects.addAll( subjectList );
-        semesterEntity.setSubjects( subjects );
+        Set<CourseEntity> courses = new HashSet<>();
+        courses.addAll( courseList );
+        semesterEntity.setCourses( courses );
         return semesterEntity;
     }
 }

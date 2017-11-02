@@ -36,14 +36,18 @@
     <tr>
         <th style="width: 150px;">FirstName</th>
         <th style="width: 200px;">LastName</th>
-        <th style="width: 200px;">GroupId</th>
+        <th style="width: 200px;">GroupName</th>
+        <th style="width: 200px;">SemesterName</th>
+        <th style="width: 200px;">Rating</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="student : ${students}">
-        <td th:text="${student.FirstName}"/>
-        <td th:text="${student.lastName}"/>
-        <td th:text="${student.groupId}"/>
+    <tr th:each="studentRating : ${studentRating}">
+        <td th:text="${studentRating.studentEntity.firstName}"/>
+        <td th:text="${studentRating.studentEntity.lastName}"/>
+        <td th:text="${studentRating.groupEntity.name}"/>
+        <td th:text="${studentRating.semesterEntity.name}"/>
+        <td th:text="${studentRating.academicRating}"/>
     </tr>
     </tbody>
 </table>

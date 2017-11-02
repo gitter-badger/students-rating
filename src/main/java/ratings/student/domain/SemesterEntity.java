@@ -14,18 +14,33 @@ import java.util.Set;
 public class SemesterEntity extends NamedEntity {
 
     @ManyToMany( fetch = FetchType.EAGER, cascade = CascadeType.ALL )
-    @JoinTable( name = "semester_subjects", joinColumns = {
+    @JoinTable( name = "semester_courses", joinColumns = {
             @JoinColumn(name = "semester_id", nullable = false, updatable = false ) },
-            inverseJoinColumns = { @JoinColumn( name = "subject_id", nullable = false, updatable = false) } )
-    Set<SubjectEntity> subjects;
+            inverseJoinColumns = { @JoinColumn( name = "course_id", nullable = false, updatable = false) } )
+    private Set<CourseEntity> courses;
 
-    public Set<SubjectEntity> getSubjects() {
-        if ( subjects == null ) subjects = new HashSet<>();
-        return subjects;
+    public Set<CourseEntity> getCourses() {
+        if ( courses == null ) courses = new HashSet<>();
+        return courses;
     }
 
-    public void setSubjects(Set<SubjectEntity> subjects) {
-        this.subjects = subjects;
+    public void setCourses(Set<CourseEntity> courses) {
+        this.courses = courses;
+    }
+
+    @Override
+    public SemesterEntity clone()  {
+        try {
+            SemesterEntity entity = (SemesterEntity) super.clone();
+            Set<CourseEntity> clonedCourses = new HashSet<>();
+            for(CourseEntity course: entity.getCourses()) {
+                clonedCourses.add(course.clone());
+            }
+            entity.setCourses(clonedCourses);
+            return entity;
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
     }
 
     @Override
@@ -36,13 +51,13 @@ public class SemesterEntity extends NamedEntity {
 
         SemesterEntity that = (SemesterEntity) o;
 
-        return subjects != null ? subjects.equals(that.subjects) : that.subjects == null;
+        return courses != null ? courses.equals(that.courses) : that.courses == null;
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + (subjects != null ? subjects.hashCode() : 0);
+        result = 31 * result + (courses != null ? courses.hashCode() : 0);
         return result;
     }
 }

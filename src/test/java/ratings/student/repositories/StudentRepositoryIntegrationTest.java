@@ -31,4 +31,11 @@ public class StudentRepositoryIntegrationTest extends BaseRepositoryIntegrationT
             Assert.assertTrue( students.contains( studentEntity ) );
         }
     }
+
+    @Test
+    public void testFindByGroupId() {
+        List<StudentEntity> studentEntities = studentRepository.findByGroupId(1);
+        Assert.assertNotNull(studentEntities);
+        Assert.assertEquals(5, studentEntities.size());
+    }
 }

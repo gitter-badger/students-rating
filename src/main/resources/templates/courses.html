@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Boot Thymeleaf Hello World Example</title>
+    <title>Courses</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <link rel="stylesheet" type="text/css"
@@ -29,26 +29,24 @@
     </div>
 </nav>
 
-<h2>Students</h2>
+<h2>Courses</h2>
 
 <table id="students" class="table table-striped">
     <thead>
     <tr>
-        <th style="width: 150px;">FirstName</th>
-        <th style="width: 200px;">LastName</th>
-        <th style="width: 200px;">GroupId</th>
+        <th style="width: 150px;">Name</th>
+        <th style="width: 200px;">Credit</th>
+        <th style="width: 200px;">id</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="student : ${students}">
-        <td th:text="${student.FirstName}"/>
-        <td th:text="${student.lastName}"/>
-        <td th:text="${student.groupId}"/>
+    <tr th:each="course : ${courses}">
+        <td th:text="${course.name}"/>
+        <td th:text="${course.credit}"/>
+        <td th:text="${course.id}"/>
     </tr>
     </tbody>
 </table>
-
-
 
 </body>
 </html>

@@ -1,9 +1,10 @@
 package ratings.student.domain.base;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -11,7 +12,9 @@ import java.io.Serializable;
  * Used as a base class for objects needing this property.
  */
 @MappedSuperclass
-public abstract class BaseEntity implements Serializable {
+public abstract class BaseEntity implements Serializable, Cloneable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,17 +33,11 @@ public abstract class BaseEntity implements Serializable {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        BaseEntity that = (BaseEntity) o;
-
-        return id != null ? id.equals(that.id) : that.id == null;
-    }
+    public boolean equals(Object obj) { return EqualsBuilder.reflectionEquals(this, obj); }
 
     @Override
-    public int hashCode() {
-        return id != null ? id.hashCode() : 0;
-    }
+    public int hashCode() { return HashCodeBuilder.reflectionHashCode(this); }
+
+    @Override
+    public String toString() { return ToStringBuilder.reflectionToString(this); }
 }

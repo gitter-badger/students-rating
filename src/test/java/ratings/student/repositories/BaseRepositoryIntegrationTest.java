@@ -23,16 +23,20 @@ public class BaseRepositoryIntegrationTest extends RandomizeData {
     StudentRepository studentRepository;
 
     @Autowired
-    SubjectRepository subjectRepository;
+    CourseRepository courseRepository;
 
     @Autowired
     SemesterRepository semesterRepository;
+
+    @Autowired
+    CourseStudentRepository courseStudentRepository;
 
     @Test
     public void testBaseRepository() {
         assertNotNull( groupRepository );
         assertNotNull( studentRepository );
-        assertNotNull( subjectRepository );
+        assertNotNull(courseRepository);
         assertNotNull( semesterRepository );
+        assertNotNull(courseStudentRepository);
     }
 }

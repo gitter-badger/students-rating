@@ -1,5 +1,9 @@
 package ratings.student.domain.base;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
@@ -22,22 +26,11 @@ public abstract class NamedEntity extends BaseEntity {
     }
 
     @Override
-    public String toString() {
-        return this.name;
-    }
+    public boolean equals(Object obj) { return EqualsBuilder.reflectionEquals(this, obj); }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        NamedEntity that = (NamedEntity) o;
-
-        return name != null ? name.equals(that.name) : that.name == null;
-    }
+    public int hashCode() { return HashCodeBuilder.reflectionHashCode(this); }
 
     @Override
-    public int hashCode() {
-        return name != null ? name.hashCode() : 0;
-    }
+    public String toString() { return ToStringBuilder.reflectionToString(this); }
 }

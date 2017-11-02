@@ -15,8 +15,9 @@ public class WelcomeController {
     @Value("${welcome.message:test}")
     private String message = "Hello World";
 
-    @RequestMapping( value = "/welcomePage", method = RequestMethod.GET )
+    @RequestMapping( value = "/", method = RequestMethod.GET )
     public String welcomePage( Map<String, Object> model ) {
+
         model.put( "page", "welcomePage, Man." );
         model.put("message", this.message);
         model.put( "method", "GET" );

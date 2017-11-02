@@ -7,7 +7,9 @@ import java.util.List;
 
 public interface GroupRepository extends Repository<GroupEntity, Integer> {
 
-    List<GroupEntity> findById( Integer id );
+    GroupEntity findById( Integer id );
+
+    GroupEntity findByName( String name );
 
     List<GroupEntity> findAll();
 

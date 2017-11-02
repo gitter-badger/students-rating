@@ -13,8 +13,8 @@ public class WelcomeControllerTest extends BaseControllerTest {
 
     @Test
     public void testWelcomePage() throws Exception {
-        mockMvc.perform( get("/welcomePage") )
+        mockMvc.perform( get("/") )
                 .andExpect( status().isOk() )
-                .andExpect( view().name( "welcome" ) );
+                .andExpect( view().name(  "welcome" ) );
     }
 }
