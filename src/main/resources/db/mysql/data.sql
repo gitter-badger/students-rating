@@ -4,23 +4,23 @@
 USE studentsrating;
 
 # courses data:
-INSERT IGNORE INTO courses VALUES ( 1, 'course 1', 3.5 );
-INSERT IGNORE INTO courses VALUES ( 2, 'course 2', 4.5 );
-INSERT IGNORE INTO courses VALUES ( 3, 'course 3', 3.5 );
-INSERT IGNORE INTO courses VALUES ( 4, 'course 4', 4.1 );
+INSERT IGNORE INTO courses VALUES ( 1, 'Linear algebra', 3.5 );
+INSERT IGNORE INTO courses VALUES ( 2, 'Geometry', 4.5 );
+INSERT IGNORE INTO courses VALUES ( 3, 'Mathematical analysis', 3.5 );
+INSERT IGNORE INTO courses VALUES ( 4, 'Public Relations and Image Making', 4.1 );
 
 # Groups data:
-INSERT IGNORE INTO groups VALUES (1, 'group name');
+INSERT IGNORE INTO groups VALUES (1, 'Full-time group');
 
 # Students data:
-INSERT IGNORE INTO students VALUES (1,'firstName 1','lastName 1',1);
-INSERT IGNORE INTO students VALUES (2,'firstName 2','lastName 2',1);
-INSERT IGNORE INTO students VALUES (3,'firstName 3','lastName 3',1);
-INSERT IGNORE INTO students VALUES (4,'firstName 4','lastName 4',1);
-INSERT IGNORE INTO students VALUES (5,'firstName 5','lastName 5',1);
+INSERT IGNORE INTO students VALUES (1,'Alexey','Pogorelov',1);
+INSERT IGNORE INTO students VALUES (2,'Aleksander','Akhiezer',1);
+INSERT IGNORE INTO students VALUES (3,'Lev','Landau',1);
+INSERT IGNORE INTO students VALUES (4,'Isaak','Khalatnikov',1);
+INSERT IGNORE INTO students VALUES (5,'Alexei','Abrikosov',1);
 
 # Semesters data:
-INSERT IGNORE INTO semesters VALUES (1, 'semester 1');
+INSERT IGNORE INTO semesters VALUES (1, '1970-1971-1');
 
 # course Students data:
 # student 1

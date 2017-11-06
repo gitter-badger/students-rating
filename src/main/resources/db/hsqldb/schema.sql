@@ -13,19 +13,19 @@ CREATE TABLE semesters (
 
 CREATE TABLE courses (
   id     INTEGER IDENTITY PRIMARY KEY,
-  name   VARCHAR(30),
+  name   VARCHAR(100),
   credit DOUBLE
 );
 
 CREATE TABLE groups (
   id     INTEGER IDENTITY PRIMARY KEY,
-  name   VARCHAR(30)
+  name   VARCHAR(100)
 );
 
 CREATE TABLE students (
   id         INTEGER IDENTITY PRIMARY KEY,
-  first_name VARCHAR(40),
-  last_name  VARCHAR(40),
+  first_name VARCHAR(100),
+  last_name  VARCHAR(100),
   group_id   INTEGER
 );
 ALTER TABLE students ADD CONSTRAINT fk_sudents_groups FOREIGN KEY (group_id) REFERENCES groups(id);

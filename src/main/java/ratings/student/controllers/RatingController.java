@@ -14,8 +14,8 @@ public class RatingController {
     @Autowired
     CountRatingService service;
 
-    private final static String GROUP_NAME = "group name";
-    private final static String SEMESTER_NAME = "semester 1";
+    private final static String GROUP_NAME = "Full-time group";
+    private final static String SEMESTER_NAME = "1970-1971-1";
 
     @RequestMapping( value = "/rating", method = RequestMethod.GET )
     public String showRating( Map<String, Object> model ) {
