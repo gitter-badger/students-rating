@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+#
+# Executable file to run keyCloak application.
+#
+keycloak-3.3.0.Final/bin/./standalone.sh
